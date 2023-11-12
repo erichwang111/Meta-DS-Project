@@ -1,0 +1,49 @@
+.title{
+    color:#2C2C54;
+}
+
+.login-box{
+    border: 1px solid black;
+    max-width: 500px;
+    padding: 50px 50px 0px 50px;
+}
+
+.form-control{
+    padding: 10px 10px 10px 10px
+}
+
+.submit{
+    padding: 45px 0px 0px 0px;
+    text-align:center;
+}
+
+.submit_btn{
+    border-radius: 15px;
+    transition-duration: 0.5s;
+    background-color:#2C2C54;
+    color:white;
+    padding: 10px 169px 10px 169px
+}
+
+.submit_btn:hover {
+  background-color:#474787;
+  color: white;
+}
+
+.forgot{
+    color:blue;
+    padding: 45px 0px 0px 0px;
+}
+
+.close{
+    border:none;
+    background-color:#FFFFFF;
+    font-size:30px;
+}
+
+.btn-warning{
+    background-color:white !important;
+    border:none !important;
+    color:blue !important;
+    margin-bottom: 5px;
+}
