@@ -20,10 +20,10 @@
                 </div>
                 <div class="form-group mt-2 mb-1">
                     <label for="InputPassword" class="form-label">Password</label>
-                    <input class="form-control" placeholder="Enter your password" id="InputPassword" name="password">
+                    <input type="password" class="form-control" placeholder="Enter your password" id="InputPassword" name="password">
                 </div>
             <div class="form-check mb-1">
-                <input type="checkbox" class="show-pw" id="ShowPassword">
+                <input type="checkbox" class="show-pw" id="ShowPassword" onclick="showpassword(_">
                 <label class="form-check-label" for="ShowPassword">Show password</label>
             </div>
                 {% with messages = get_flashed_messages() %}
@@ -51,7 +51,7 @@
             </button>
           </div>
           <div class="modal-body">
-            Please contact example@gmail.com for more information
+            Please contact example@gmail.com for ID and password recovery.
           </div>
 
         </div>
@@ -59,5 +59,19 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var showPassword = document.querySelector('.show-pw')
+            var password = document.getElementById('InputPassword')
+            showPassword.addEventListener('change', function(){
+                if(this.checked){
+                    password.type = 'text';
+                }else{
+                    password.type = 'password';
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
