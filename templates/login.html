@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Meta Login</title>
+      <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../static/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="../static/img/favicon.png" rel="icon">
 </head>
 <body>
 
@@ -23,35 +24,36 @@
                     <input type="password" class="form-control" placeholder="Enter your password" id="InputPassword" name="password">
                 </div>
             <div class="form-check mb-1">
-                <input type="checkbox" class="show-pw" id="ShowPassword" onclick="showpassword(_">
+                <input type="checkbox" class="show-pw" id="ShowPassword">
                 <label class="form-check-label" for="ShowPassword">Show password</label>
             </div>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
-                        <div class="alert alert-danger mt-2" role="alert">
-                            incorrect Admin ID or password
+                        <div class="alert alert-danger mt-3" role="alert">
+                          Wrong username or password!
                         </div>
                     {% endif %}
                 {% endwith %}
             <div class="submit">
                 <button type="submit" class="submit_btn mt-1 mx-auto">Submit</button>
             </div>
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#forgotModal"> Forgot password?</button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#forgotModal"> Forgot password?</button>
             </form>
         </div>
     </div>
 
-    <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="forgotModal" aria-hidden="true">
+
+    <div class="modal" tabindex="-1" role="dialog" id="forgotModal" aria-labelledby="forgotModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Forgot Password?</h5>
+            <h5 class="modal-title">Modal title</h5>
             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <i class="bi bi-x"></i>
+              <i class="bi bi-x-octagon"></i>
             </button>
           </div>
           <div class="modal-body">
-            Please contact example@gmail.com for ID and password recovery.
+            <p>Modal body text goes here.</p>
           </div>
 
         </div>
@@ -61,8 +63,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function(){
-            var showPassword = document.querySelector('.show-pw')
-            var password = document.getElementById('InputPassword')
+            var showPassword = document.querySelector('.show-pw');
+            var password = document.getElementById('InputPassword');
             showPassword.addEventListener('change', function(){
                 if(this.checked){
                     password.type = 'text';

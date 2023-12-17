@@ -34,16 +34,24 @@
     color:blue;
     padding: 45px 0px 0px 0px;
 }
-
 .close{
     border:none;
-    background-color:#FFFFFF;
-    font-size:30px;
+    background:white;
 }
+.close i{
 
-.btn-warning{
+    font-size:22px;
+}
+.close i:hover{
+    color:darkgray;
+}
+.btn-warning {
     background-color:white !important;
-    border:none !important;
-    color:blue !important;
-    margin-bottom: 5px;
+    border: none !important;
+    margin-top: 10px;
+    margin-bottom:34px;
+    color: blue !important;
+}
+.btn-warning:hover {
+    color: skyblue !important;
 }

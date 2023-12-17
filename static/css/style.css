@@ -162,7 +162,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -302,7 +302,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -975,4 +975,8 @@ section {
 
 #footer .credits a:hover {
   color: #474787;
+}
+.aboutimg{
+    width: 75%;
+    border-radius: 8px;
 }
