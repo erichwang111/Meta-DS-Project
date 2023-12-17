@@ -980,3 +980,19 @@ section {
     width: 75%;
     border-radius: 8px;
 }
+.downloadbtn{
+
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid #5F6698;
+  transition: 0.3s;
+}
+.downloadbtn:hover{
+
+  background-color: #5F6698;
+  
+  color: black;
+ 
+}
